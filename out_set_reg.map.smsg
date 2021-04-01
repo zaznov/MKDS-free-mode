@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at out_set_reg.sv(47): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at separate_regs_out.sv(157): extended using "x" or "z"
