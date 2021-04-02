@@ -1,5 +1,6 @@
 module control_logic_unit
 (
+	input logic CS,
 	input logic	[15:0]  data_in,
 	input logic	CLK,
 	output logic	[15:0]  strob_out_to_reg,
@@ -7,9 +8,9 @@ module control_logic_unit
 
 );
 
-logic strob_RW_RD;
+logic strob_WR;
 logic CLR;
-assign strob_RW_RD = data_in[14];
+assign strob_WR = CS;
 assign CLR = data_in[15];
 
 
@@ -19,7 +20,7 @@ logic strob_main;
 delay_3 delay_3_my
 (
 CLK,
-strob_RW_RD,
+strob_WR,
 CLR,
 strob_main
 );

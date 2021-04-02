@@ -43,22 +43,22 @@
 	output logic	OE_12_2,
 	
 	
-	output logic	[7:0]  data_out_from_buf_0,
-	output logic	[7:0]  data_out_from_buf_1,
-	output logic	[7:0]  data_out_from_buf_2,
-	output logic	[7:0]  data_out_from_buf_3,
-	output logic	[7:0]  data_out_from_buf_4,
-	output logic	[7:0]  data_out_from_buf_5,
-	output logic	[7:0]  data_out_from_buf_6,
-	output logic	[7:0]  data_out_from_buf_7,
-	output logic	[7:0]  data_out_from_buf_8,
-	output logic	[7:0]  data_out_from_buf_9,
-	output logic	[7:0]  data_out_from_buf_10,
-	output logic	[7:0]  data_out_from_buf_11,
-	output logic	[7:0]  data_out_from_buf_12,
-	output logic	[7:0]  data_out_from_buf_13,
-	output logic	[7:0]  data_out_from_buf_14,
-	output logic	[7:0]  data_out_from_buf_15
+	output tri	[7:0]  data_out_from_buf_0,
+	output tri	[7:0]  data_out_from_buf_1,
+	output tri	[7:0]  data_out_from_buf_2,
+	output tri	[7:0]  data_out_from_buf_3,
+	output tri	[7:0]  data_out_from_buf_4,
+	output tri	[7:0]  data_out_from_buf_5,
+	output tri	[7:0]  data_out_from_buf_6,
+	output tri	[7:0]  data_out_from_buf_7,
+	output tri	[7:0]  data_out_from_buf_8,
+	output tri	[7:0]  data_out_from_buf_9,
+	output tri	[7:0]  data_out_from_buf_10,
+	output tri	[7:0]  data_out_from_buf_11,
+	output tri	[7:0]  data_out_from_buf_12,
+	output tri	[7:0]  data_out_from_buf_13,
+	output tri	[7:0]  data_out_from_buf_14,
+	output tri	[7:0]  data_out_from_buf_15
 
 );
 
@@ -194,7 +194,7 @@ data_out_from_buf_11 [7:0],
 data_out_from_buf_12 [7:0],
 data_out_from_buf_13 [7:0],
 data_out_from_buf_14 [7:0],
-data_out_from_buf_15 [7:0],
+data_out_from_buf_15 [7:0]
 );
 
 

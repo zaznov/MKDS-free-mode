@@ -1,2 +1,3 @@
 Warning (10273): Verilog HDL warning at out_set_reg.sv(47): extended using "x" or "z"
 Warning (10273): Verilog HDL warning at separate_regs_out.sv(157): extended using "x" or "z"
+Warning (10268): Verilog HDL information at SPI_unit.sv(147): always construct contains both blocking and non-blocking assignments

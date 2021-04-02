@@ -38,22 +38,22 @@
 
 	input logic		[7:0]  data_in,
 
-	output logic	[7:0]  data_out_from_buf_0,
-	output logic	[7:0]  data_out_from_buf_1,
-	output logic	[7:0]  data_out_from_buf_2,
-	output logic	[7:0]  data_out_from_buf_3,
-	output logic	[7:0]  data_out_from_buf_4,
-	output logic	[7:0]  data_out_from_buf_5,
-	output logic	[7:0]  data_out_from_buf_6,
-	output logic	[7:0]  data_out_from_buf_7,
-	output logic	[7:0]  data_out_from_buf_8,
-	output logic	[7:0]  data_out_from_buf_9,
-	output logic	[7:0]  data_out_from_buf_10,
-	output logic	[7:0]  data_out_from_buf_11,
-	output logic	[7:0]  data_out_from_buf_12,
-	output logic	[7:0]  data_out_from_buf_13,
-	output logic	[7:0]  data_out_from_buf_14,
-	output logic	[7:0]  data_out_from_buf_15
+	output tri	[7:0]  data_out_from_buf_0,
+	output tri	[7:0]  data_out_from_buf_1,
+	output tri	[7:0]  data_out_from_buf_2,
+	output tri	[7:0]  data_out_from_buf_3,
+	output tri	[7:0]  data_out_from_buf_4,
+	output tri	[7:0]  data_out_from_buf_5,
+	output tri	[7:0]  data_out_from_buf_6,
+	output tri	[7:0]  data_out_from_buf_7,
+	output tri	[7:0]  data_out_from_buf_8,
+	output tri	[7:0]  data_out_from_buf_9,
+	output tri	[7:0]  data_out_from_buf_10,
+	output tri	[7:0]  data_out_from_buf_11,
+	output tri	[7:0]  data_out_from_buf_12,
+	output tri	[7:0]  data_out_from_buf_13,
+	output tri	[7:0]  data_out_from_buf_14,
+	output tri	[7:0]  data_out_from_buf_15
 );
 
 logic	[7:0]  data_out_from_reg_0;
@@ -107,9 +107,9 @@ Buffer_IO Buffer_IO_9(data_out_from_reg_9, dir_9_2, data_out_from_buf_9);
 Buffer_IO Buffer_IO_10(data_out_from_reg_10, dir_10_1, data_out_from_buf_10);
 Buffer_IO Buffer_IO_11(data_out_from_reg_11, dir_10_2, data_out_from_buf_11);
 Buffer_IO Buffer_IO_12(data_out_from_reg_12, dir_11_1, data_out_from_buf_12);
-Buffer_IO Buffer_IO_13(data_out_from_reg_12, dir_11_2, data_out_from_buf_13);
-Buffer_IO Buffer_IO_14(data_out_from_reg_13, dir_12_1, data_out_from_buf_14);
-Buffer_IO Buffer_IO_15(data_out_from_reg_14, dir_12_2, data_out_from_buf_15);
+Buffer_IO Buffer_IO_13(data_out_from_reg_13, dir_11_2, data_out_from_buf_13);
+Buffer_IO Buffer_IO_14(data_out_from_reg_14, dir_12_1, data_out_from_buf_14);
+Buffer_IO Buffer_IO_15(data_out_from_reg_15, dir_12_2, data_out_from_buf_15);
 
 endmodule 
 
