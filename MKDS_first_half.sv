@@ -4,45 +4,27 @@ module MKDS_first_half
 	input logic	[15:0]  data_in,
 	input logic	CLK,
 
+	output logic	[15:0]OE,
+	output logic	[15:0]dir,
 
 
 
-	output logic	OE_5_1,
-	output logic	OE_5_2,
-	output logic	OE_6_1,
-	output logic	OE_6_2,
-	output logic	OE_7_1,
-	output logic	OE_7_2,
-	output logic	OE_8_1,
-	output logic	OE_8_2,
-	output logic	OE_9_1,
-	output logic	OE_9_2,
-	output logic	OE_10_1,
-	output logic	OE_10_2,
-	output logic	OE_11_1,
-	output logic	OE_11_2,
-	output logic	OE_12_1,
-	output logic	OE_12_2,
-
-
-	inout tri	[7:0]  data_out_from_buf_0,
-	inout tri	[7:0]  data_out_from_buf_1,
-	inout tri	[7:0]  data_out_from_buf_2,
-	inout tri	[7:0]  data_out_from_buf_3,
-	inout tri	[7:0]  data_out_from_buf_4,
-	inout tri	[7:0]  data_out_from_buf_5,
-	inout tri	[7:0]  data_out_from_buf_6,
-	inout tri	[7:0]  data_out_from_buf_7,
-	inout tri	[7:0]  data_out_from_buf_8,
-	inout tri	[7:0]  data_out_from_buf_9,
-	inout tri	[7:0]  data_out_from_buf_10,
-	inout tri	[7:0]  data_out_from_buf_11,
-	inout tri	[7:0]  data_out_from_buf_12,
-	inout tri	[7:0]  data_out_from_buf_13,
-	inout tri	[7:0]  data_out_from_buf_14,
-	inout tri	[7:0]  data_out_from_buf_15,
-	
-	output logic 	[7:0]	data_out_from_mux
+	output logic	[7:0]  data_out_from_reg_0,
+	output logic	[7:0]  data_out_from_reg_1,
+	output logic	[7:0]  data_out_from_reg_2,
+	output logic	[7:0]  data_out_from_reg_3,
+	output logic	[7:0]  data_out_from_reg_4,
+	output logic	[7:0]  data_out_from_reg_5,
+	output logic	[7:0]  data_out_from_reg_6,
+	output logic	[7:0]  data_out_from_reg_7,
+	output logic	[7:0]  data_out_from_reg_8,
+	output logic	[7:0]  data_out_from_reg_9,
+	output logic	[7:0]  data_out_from_reg_10,
+	output logic	[7:0]  data_out_from_reg_11,
+	output logic	[7:0]  data_out_from_reg_12,
+	output logic	[7:0]  data_out_from_reg_13,
+	output logic	[7:0]  data_out_from_reg_14,
+	output logic	[7:0]  data_out_from_reg_15
 
 );
 
@@ -50,8 +32,76 @@ module MKDS_first_half
 logic	[15:0]  strob_out_to_reg;
 logic	[3:0]  strob_out_to_dir;
 
+logic	OE_5_1;
+logic	OE_5_2;
+logic	OE_6_1;
+logic	OE_6_2;
+logic	OE_7_1;
+logic	OE_7_2;
+logic	OE_8_1;
+logic	OE_8_2;
+logic	OE_9_1;
+logic	OE_9_2;
+logic	OE_10_1;
+logic	OE_10_2;
+logic	OE_11_1;
+logic	OE_11_2;
+logic	OE_12_1;
+logic	OE_12_2;
 
 
+assign OE[0] = OE_5_1;
+assign OE[1] = OE_5_2;
+assign OE[2] = OE_6_1;
+assign OE[3] = OE_6_2;
+assign OE[4] = OE_7_1;
+assign OE[5] = OE_7_2;
+assign OE[6] = OE_8_1;
+assign OE[7] = OE_8_2;
+assign OE[8] = OE_9_1;
+assign OE[9] = OE_9_2;
+assign OE[10] = OE_10_1;
+assign OE[11] = OE_10_2;
+assign OE[12] = OE_11_1;
+assign OE[13] = OE_11_2;
+assign OE[14] = OE_12_1;
+assign OE[15] = OE_12_2;
+
+
+logic	dir_5_1;
+logic	dir_5_2;
+logic	dir_6_1;
+logic	dir_6_2;
+logic	dir_7_1;
+logic	dir_7_2;
+logic	dir_8_1;
+logic	dir_8_2;
+logic	dir_9_1;
+logic	dir_9_2;
+logic	dir_10_1;
+logic	dir_10_2;
+logic	dir_11_1;
+logic	dir_11_2;
+logic	dir_12_1;
+logic	dir_12_2;
+
+
+assign dir[0] = dir_5_1;
+assign dir[1] = dir_5_2;
+assign dir[2] = dir_6_1;
+assign dir[3] = dir_6_2;
+assign dir[4] = dir_7_1;
+assign dir[5] = dir_7_2;
+assign dir[6] = dir_8_1;
+assign dir[7] = dir_8_2;
+assign dir[8] = dir_9_1;
+assign dir[9] = dir_9_2;
+assign dir[10] = dir_10_1;
+assign dir[11] = dir_10_2;
+assign dir[12] = dir_11_1;
+assign dir[13] = dir_11_2;
+assign dir[14] = dir_12_1;
+assign dir[15] = dir_12_2;
 
 
 control_logic_unit control_logic_unit
@@ -112,48 +162,45 @@ OE_12_1,
 OE_12_2,
 	
 	
-data_out_from_buf_0[7:0],
-data_out_from_buf_1[7:0],
-data_out_from_buf_2[7:0],
-data_out_from_buf_3[7:0],
-data_out_from_buf_4[7:0],
-data_out_from_buf_5[7:0],
-data_out_from_buf_6[7:0],
-data_out_from_buf_7[7:0],
-data_out_from_buf_8[7:0],
-data_out_from_buf_9[7:0],
-data_out_from_buf_10[7:0],
-data_out_from_buf_11[7:0],
-data_out_from_buf_12[7:0],
-data_out_from_buf_13[7:0],
-data_out_from_buf_14[7:0],
-data_out_from_buf_15[7:0]
+data_out_from_reg_0[7:0],
+data_out_from_reg_1[7:0],
+data_out_from_reg_2[7:0],
+data_out_from_reg_3[7:0],
+data_out_from_reg_4[7:0],
+data_out_from_reg_5[7:0],
+data_out_from_reg_6[7:0],
+data_out_from_reg_7[7:0],
+data_out_from_reg_8[7:0],
+data_out_from_reg_9[7:0],
+data_out_from_reg_10[7:0],
+data_out_from_reg_11[7:0],
+data_out_from_reg_12[7:0],
+data_out_from_reg_13[7:0],
+data_out_from_reg_14[7:0],
+data_out_from_reg_15[7:0],
+
+
+dir_5_1,
+dir_5_2,
+dir_6_1,
+dir_6_2,
+dir_7_1,
+dir_7_2,
+dir_8_1,
+dir_8_2,
+dir_9_1,
+dir_9_2,
+dir_10_1,
+dir_10_2,
+dir_11_1,
+dir_11_2,
+dir_12_1,
+dir_12_2
 
 );
 
 
 
-mux_128_8 mux_128_8
-(	
-data_in[11:8],
-data_out_from_buf_0[7:0],
-data_out_from_buf_1[7:0],
-data_out_from_buf_2[7:0],
-data_out_from_buf_3[7:0],
-data_out_from_buf_4[7:0],
-data_out_from_buf_5[7:0],
-data_out_from_buf_6[7:0],
-data_out_from_buf_7[7:0],
-data_out_from_buf_8[7:0],
-data_out_from_buf_9[7:0],
-data_out_from_buf_10[7:0],
-data_out_from_buf_11[7:0],
-data_out_from_buf_12[7:0],
-data_out_from_buf_13[7:0],
-data_out_from_buf_14[7:0],
-data_out_from_buf_15[7:0],
-data_out_from_mux[7:0]
-);
 
 
 

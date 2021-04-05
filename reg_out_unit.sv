@@ -43,22 +43,39 @@
 	output logic	OE_12_2,
 	
 	
-	output tri	[7:0]  data_out_from_buf_0,
-	output tri	[7:0]  data_out_from_buf_1,
-	output tri	[7:0]  data_out_from_buf_2,
-	output tri	[7:0]  data_out_from_buf_3,
-	output tri	[7:0]  data_out_from_buf_4,
-	output tri	[7:0]  data_out_from_buf_5,
-	output tri	[7:0]  data_out_from_buf_6,
-	output tri	[7:0]  data_out_from_buf_7,
-	output tri	[7:0]  data_out_from_buf_8,
-	output tri	[7:0]  data_out_from_buf_9,
-	output tri	[7:0]  data_out_from_buf_10,
-	output tri	[7:0]  data_out_from_buf_11,
-	output tri	[7:0]  data_out_from_buf_12,
-	output tri	[7:0]  data_out_from_buf_13,
-	output tri	[7:0]  data_out_from_buf_14,
-	output tri	[7:0]  data_out_from_buf_15
+	output logic	[7:0]  data_out_from_reg_0,
+	output logic	[7:0]  data_out_from_reg_1,
+	output logic	[7:0]  data_out_from_reg_2,
+	output logic	[7:0]  data_out_from_reg_3,
+	output logic	[7:0]  data_out_from_reg_4,
+	output logic	[7:0]  data_out_from_reg_5,
+	output logic	[7:0]  data_out_from_reg_6,
+	output logic	[7:0]  data_out_from_reg_7,
+	output logic	[7:0]  data_out_from_reg_8,
+	output logic	[7:0]  data_out_from_reg_9,
+	output logic	[7:0]  data_out_from_reg_10,
+	output logic	[7:0]  data_out_from_reg_11,
+	output logic	[7:0]  data_out_from_reg_12,
+	output logic	[7:0]  data_out_from_reg_13,
+	output logic	[7:0]  data_out_from_reg_14,
+	output logic	[7:0]  data_out_from_reg_15,
+
+	output logic	dir_5_1,
+	output logic	dir_5_2,
+	output logic	dir_6_1,
+	output logic	dir_6_2,
+	output logic	dir_7_1,
+	output logic	dir_7_2,
+	output logic	dir_8_1,
+	output logic	dir_8_2,
+	output logic	dir_9_1,
+	output logic	dir_9_2,
+	output logic	dir_10_1,
+	output logic	dir_10_2,
+	output logic	dir_11_1,
+	output logic	dir_11_2,
+	output logic	dir_12_1,
+	output logic	dir_12_2
 
 );
 
@@ -66,29 +83,6 @@
 logic CLR;
 assign CLR = data_in[15];
 
-
-
-logic	dir_5_1;
-logic	dir_5_2;
-logic	dir_6_1;
-logic	dir_6_2;
-logic	dir_7_1;
-logic	dir_7_2;
-logic	dir_8_1;
-logic	dir_8_2;
-logic	dir_9_1;
-logic	dir_9_2;
-logic	dir_10_1;
-logic	dir_10_2;
-logic	dir_11_1;
-logic	dir_11_2;
-logic	dir_12_1;
-logic	dir_12_2;
-
-
-	
-	
-	
 
 
 regs_dir_out regs_dir_out_my
@@ -179,22 +173,22 @@ CLR,
 
 data_in[7:0],
 
-data_out_from_buf_0 [7:0],
-data_out_from_buf_1 [7:0],
-data_out_from_buf_2 [7:0],
-data_out_from_buf_3 [7:0],
-data_out_from_buf_4 [7:0],
-data_out_from_buf_5 [7:0],
-data_out_from_buf_6 [7:0],
-data_out_from_buf_7 [7:0],
-data_out_from_buf_8 [7:0],
-data_out_from_buf_9 [7:0],
-data_out_from_buf_10 [7:0],
-data_out_from_buf_11 [7:0],
-data_out_from_buf_12 [7:0],
-data_out_from_buf_13 [7:0],
-data_out_from_buf_14 [7:0],
-data_out_from_buf_15 [7:0]
+data_out_from_reg_0 [7:0],
+data_out_from_reg_1 [7:0],
+data_out_from_reg_2 [7:0],
+data_out_from_reg_3 [7:0],
+data_out_from_reg_4 [7:0],
+data_out_from_reg_5 [7:0],
+data_out_from_reg_6 [7:0],
+data_out_from_reg_7 [7:0],
+data_out_from_reg_8 [7:0],
+data_out_from_reg_9 [7:0],
+data_out_from_reg_10 [7:0],
+data_out_from_reg_11 [7:0],
+data_out_from_reg_12 [7:0],
+data_out_from_reg_13 [7:0],
+data_out_from_reg_14 [7:0],
+data_out_from_reg_15 [7:0]
 );
 
 
